@@ -16,6 +16,7 @@ class PublishedBbManager(models.Manager):
 # One-to-Many (ForeignKey)
 # -----------------------------
 class Rubric(models.Model):
+    description = models.CharField(max_length=100, blank=True, default='', verbose_name='Описание')
     name = models.CharField(
         max_length=20,
         db_index=True,
