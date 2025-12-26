@@ -62,6 +62,7 @@ class Profile(models.Model):
 # -----------------------------
 class Tag(models.Model):
     color = models.CharField(max_length=20, blank=True, default='', verbose_name='Цвет')
+    note = models.CharField(max_length=50, blank=True, default='', verbose_name='Примечание')
     name = models.CharField(
         max_length=30,
         unique=True,

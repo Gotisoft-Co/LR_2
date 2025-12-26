@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic.edit import CreateView
-
+import asyncio
+from django.http import HttpResponse
 from .models import Bb, Rubric
 from .forms import BbForm
 
@@ -36,3 +37,6 @@ class BbCreateView(CreateView):
         return context
 
 
+async def async_ping(request):
+    await asyncio.sleep(0.1)
+    return HttpResponse("async ok")
