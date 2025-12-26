@@ -60,6 +60,7 @@ class Profile(models.Model):
 # Many-to-Many
 # -----------------------------
 class Tag(models.Model):
+    color = models.CharField(max_length=20, blank=True, default='', verbose_name='Цвет')
     name = models.CharField(
         max_length=30,
         unique=True,
